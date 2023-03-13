@@ -1,8 +1,8 @@
 ===============
-file_downloader
+get-file
 ===============
 
-This is the documentation of **file_downloader**.
+This is the documentation of **get-file**.
 
 .. note::
 

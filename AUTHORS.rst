@@ -2,4 +2,4 @@
 Contributors
 ============
 
-* ahtesham007 <zsyedahtesham@yahoo.com>
+* Ahtesham Zaidi <zsyedahtesham@gmail.com>

@@ -23,27 +23,50 @@
         :alt: Twitter
         :target: https://twitter.com/file_downloader
 
-.. image:: https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold
-    :alt: Project generated with PyScaffold
-    :target: https://pyscaffold.org/
+.. .. image:: https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold
+..     :alt: Project generated with PyScaffold
+..     :target: https://pyscaffold.org/
 
-|
+.. |
 
-===============
-file_downloader
-===============
-
-
-    Add a short description here!
+=========
+get-file
+=========
 
 
-A longer description of your project goes here...
+    Download any file asynchronously with ease using this Python package available on PyPi.
 
 
-.. _pyscaffold-notes:
+This Python package is designed to simplify the process of downloading files asynchronously. 
+With its easy-to-use interface, users can quickly and efficiently download any file from the internet without the need for complex coding. 
+Whether you're downloading large ones, small ones, single or multiple files this package is built to handle it all.
 
-Note
-====
+This package utilizes concept of Multi-Threading to perform downloads asynchronously, which means that the download process won't block the main thread and can continue to run in the background while other tasks are being performed. 
+This feature makes it ideal for developers who need to download large volumes of files or who want to create applications that require efficient file downloading.
 
-This project has been set up using PyScaffold 4.4. For details and usage
-information on PyScaffold see https://pyscaffold.org/.
+In addition, this package is available on PyPi, which means that it can be easily installed using pip. 
+Once installed, you can import it into your Python code and start using it right away. 
+With its simple and straightforward API, downloading files asynchronously has never been easier.
+
+
+Installation
+------------
+
+
+    ``pip install get-file``
+
+Usage
+-----
+
+    Download Single File :
+
+     ``from file_downloader import get_file``
+     
+     ``get_file.download("https://example.com/file.mp3")``
+
+    Download Multiple Files :
+
+        ``from file_downloader import get_file``
+        
+        ``get_file.download_files(["https://example.com/file1.mp3", "https://example.com/file2.pdf"])``
+
