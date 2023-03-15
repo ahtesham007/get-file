@@ -7,6 +7,7 @@ Author
     
 """
 
+
 def download_files(links: list) -> None:
     """
     Downloads all the links in the list asynchronously using separate threads.
@@ -22,7 +23,7 @@ def download_files(links: list) -> None:
         Thread(target=download, args=(link,)).start()
 
 
-def download(link : str) -> None:
+def download(link: str) -> None:
     """
     Downloads a single file from the given link.
 
@@ -32,12 +33,17 @@ def download(link : str) -> None:
     Returns:
         None
     """
-    filename = link.split("/")[-1]
+    try:
+        filename = link.split("/")[-1]
 
-    print(f'Downloading file :: {link} ..... \n')
-    os.system(rf'curl {link} --output {filename}')
-    print(f'Downloading finished :: {link} .....\n')
+        print(f'Downloading file :: {link} ..... \n')
+        os.system(rf'curl {link} --output {filename}')
+        print(f'Downloading finished :: {link} .....\n')
+
+    except:
+        print("Something is wrong with the download link")
 
 
 if __name__ == "__main__":
-    download_files(['https://example.com/file1.mp3', 'https://example.com/file2.mp3', 'https://example.com/file.pdf'])
+    download_files(['https://example.com/file1.mp3',
+                   'https://example.com/file2.mp3', 'https://example.com/file.pdf'])
