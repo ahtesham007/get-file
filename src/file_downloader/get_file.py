@@ -1,5 +1,7 @@
 from threading import Thread
 import os
+from helpers import check_filename
+from datetime import datetime
 
 """
 Author
@@ -34,16 +36,25 @@ def download(link: str) -> None:
         None
     """
     try:
+
         filename = link.split("/")[-1]
+        cmd = rf'curl {link} --output {filename}'
+
+        if not check_filename(filename):
+            filename = f"get_file_{datetime.now().time().strftime('%H_%M_%S')}"
+            if 'img' in link or 'photo' in link:
+                filename += ".png"
+            cmd = rf"""curl "{link}" --output "{filename}" """
 
         print(f'Downloading file :: {link} ..... \n')
-        os.system(rf'curl {link} --output {filename}')
-        print(f'Downloading finished :: {link} .....\n')
+        os.system(cmd)
+        print(f'Downloading finished :: {link} ..... \n')
 
     except:
         print("Something is wrong with the download link")
 
 
 if __name__ == "__main__":
+    download('www.ex.com')
     download_files(['https://example.com/file1.mp3',
                    'https://example.com/file2.mp3', 'https://example.com/file.pdf'])
