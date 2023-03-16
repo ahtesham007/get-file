@@ -29,9 +29,20 @@
 
 .. |
 
-=========
+|version| |license|
+
+.. |version| image:: https://img.shields.io/pypi/v/get-file
+    :target: https://pypi.org/project/get-file/
+    :alt: PyPI - Package Version
+
+.. |license| image:: https://img.shields.io/pypi/l/get-file
+    :target: https://github.com/paramiko/get-file/blob/main/LICENSE
+    :alt: PyPI - License
+
+
+========
 get-file
-=========
+========
 
 
     Download any file asynchronously with ease using this Python package available on PyPi.
@@ -48,6 +59,10 @@ In addition, this package is available on PyPi, which means that it can be easil
 Once installed, you can import it into your Python code and start using it right away. 
 With its simple and straightforward API, downloading files asynchronously has never been easier.
 
+Contributions
+-------------
+Actively soliciting contributors!
+Have ideas for how get-file can be improved? Feel free to open an issue or a pull request!
 
 Installation
 ------------
@@ -70,3 +85,12 @@ Usage
         
         ``get_file.download_files(["https://example.com/file1.mp3", "https://example.com/file2.pdf"])``
 
+Restrictions
+------------
+
+- It won't download youtube videos
+- Only support download links that have files in the prefix
+
+Example - 
+   Link should contain filename
+      For example : www.example.com/file.pdf
